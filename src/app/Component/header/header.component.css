@@ -1,0 +1,32 @@
+section.header {
+    padding: 10px;
+    background-image: linear-gradient(45deg, #00c4ff, #007eff);
+}
+.seach-box input[type="text"] {
+    padding: 5px 50px 5px 22px;
+    border: 0;
+    color: black;
+    outline: none;
+    width: 61%;
+}
+.seach-box i.bi.bi-search {
+    position: absolute;
+    left: 410px;
+    top: 5px;
+    color: black;
+}
+section.header button.btn i.bi {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+}
+section.header button.btn span.badge {
+    position: absolute;
+    top: -1px;
+    left: 28px;
+    background: red;
+    font-size: 12px;
+    border: 0;
+    padding: 2px 5px;
+    border-radius: 0;
+}

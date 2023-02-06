@@ -1,0 +1,43 @@
+<section class="product p-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <a (click)="filter('')" class="one">All Products</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <a (click)="filter('electronics')" class="one">Electronics</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <a (click)="filter('fashion')" class="one">Fashion</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <a (click)="filter('jewelery')" class="one">Jewllery</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="apiCards">
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let item of filterCategory | filter:searchKey :'title' ">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="card" style="width: 100%; margin:15px 10px">
+                    <img class="img-fluid" style="height: 200px; width: 200px;" src={{item.image}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"
+                      style="white-space:nowrap ; overflow: hidden; text-overflow: ellipsis;  max-width: 100ch;">{{item.title}}</h5>
+
+                      <p class="card-text" style="white-space:nowrap ; overflow: hidden; text-overflow: ellipsis;  max-width: 100ch;">{{item.description}}</p>
+
+                      <p>$ {{item.price}}</p>
+                      <a class="btn btn-primary w-100" (click)=addToCart(item)>Add To Cart</a>
+                    </div>
+                  </div>                     
+                </div>
+               
+            </ng-container>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<section class="header">
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-lg-1 col-md-1 col-sm-4 col-xs-12">
+                <h5 class="text-white fw-bold" routerLink="" style="cursor: pointer;">LOGO</h5>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-4 col-xs-12">
+                <div class="seach-box" style="position: relative;">
+                    <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search" >
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 text-end">
+                <button routerLink="cart" class="btn" style="position: relative; outline: none;">
+                    <i class="bi bi-cart3"></i>
+                    <span class="badge">{{totalItem}}</span>
+                </button>                                               
+            </div>
+        </div>
+    </div>
+</section>
