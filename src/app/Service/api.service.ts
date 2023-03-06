@@ -6,9 +6,8 @@ import { map} from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
-  constructor( private http : HttpClient) { }
-
+  constructor (private http : HttpClient) { }
+  // Get Data form API
   getProduct(){
     return this.http.get<any>('https://fakestoreapi.com/products/')
     .pipe(map((res:any)=>{
